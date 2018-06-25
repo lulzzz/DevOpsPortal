@@ -1,0 +1,26 @@
+<h1>CINX Ftp Files Check</h1>
+
+<p *ngIf="!results"><em>Loading...</em></p>
+
+<table class='table' *ngIf="results">
+  <thead>
+    <tr>
+      <th>Errored</th>
+      <th>District</th>
+      <th>Path</th>
+      <th>Time Limit in Minutes</th>
+      <th>Last File Drop Time</th>
+      <th>Time Checked</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let result of results">
+      <td>{{ result.errored }}</td>
+      <td>{{ result.district }}</td>
+      <td>{{ result.path }}</td>
+      <td>{{ result.timeLimit }}</td>
+      <td>{{ result.lastDropTime }}</td>
+      <td>{{ result.timeChecked }}</td>
+    </tr>
+  </tbody>
+</table>
