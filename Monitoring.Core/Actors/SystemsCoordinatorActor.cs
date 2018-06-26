@@ -17,8 +17,8 @@ namespace Monitoring.Core.Actors
 
             Receive<IMonitorMessage>(m => SendMonitorMessageToSystem(m));
             Receive<ISubscribeMonitorMessage>(m => PassSubscription(m));
-            Receive<SubscribeToAllMonitorsMessage>(m => SubscribeToAllMonitors());
-            Receive<UnsubscribeFromAllMonitorsMessage>(m => UnsubscribeFromAllMonitors());            
+            Receive<SubscribeToAllMonitorsMessage>(m => SubscribeToAllMonitors(m));
+            Receive<UnsubscribeFromAllMonitorsMessage>(m => UnsubscribeFromAllMonitors(m));            
 
         }     
 
@@ -37,14 +37,20 @@ namespace Monitoring.Core.Actors
 
         }
 
-        private void SubscribeToAllMonitors()
+        private void SubscribeToAllMonitors(SubscribeToAllMonitorsMessage message)
         {
-
+            foreach (var system in _systemActors)
+            {
+                system.Value.Tell(message);
+            }
         }
 
-        private void UnsubscribeFromAllMonitors()
+        private void UnsubscribeFromAllMonitors(UnsubscribeFromAllMonitorsMessage message)
         {
-
+            foreach (var system in _systemActors)
+            {
+                system.Value.Tell(message);
+            }
         }
 
         private void SystemRegistration(string system)

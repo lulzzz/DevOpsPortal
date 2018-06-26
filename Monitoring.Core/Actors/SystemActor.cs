@@ -15,6 +15,7 @@ namespace Monitoring.Core.Actors
 
             Receive<FtpFileMonitorMessage>(m => StartFtpFileMonitor(m));
             Receive<PowerShellMonitorMessage>(m => StartPowerShellMonitor(m));
+            Receive<CmdMonitorMessage>(m => StartCmdMonitor(m));
         }
 
         private void StartFtpFileMonitor(FtpFileMonitorMessage message)
@@ -23,6 +24,10 @@ namespace Monitoring.Core.Actors
         }
 
         private void StartPowerShellMonitor(PowerShellMonitorMessage message)
+        {
+
+        }
+        private void StartCmdMonitor(CmdMonitorMessage message)
         {
 
         }
