@@ -16,8 +16,14 @@ namespace Monitoring.Core.Executors
         {
             using (PowerShell ps = PowerShell.Create())
             {
+                
                 var results = ps.AddScript(script).Invoke();
 
+                if (true)
+                {
+                    return new ResultModel(ResultEnum.Unknown, 0);
+                }
+                
                 foreach (var result in results)
                 {
                     if ()
@@ -26,7 +32,7 @@ namespace Monitoring.Core.Executors
                     }
                 }
 
-                return new ResultModel(ResultEnum.Unknown, 0);
+                
             }
 
                 
