@@ -7,13 +7,12 @@ namespace Monitoring.Core.Messages.MonitorMessages
 {
     public class SubscribeToMonitorMessage : ISubscribeMonitorMessage
     {
-        public SubscribeToMonitorMessage(string name, string system, IActorRef subscriberReference) :base(system)
+        public SubscribeToMonitorMessage(string name, string system, IActorRef subscriberReference) :base(system, name)
         {
-            Name = name;
-            SubscriberReference = subscriberReference;
+           SubscriberReference = subscriberReference;
         }
 
-        public string Name { get; }
+       
         public IActorRef SubscriberReference { get; }
     }
 }

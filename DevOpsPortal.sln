@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevOpsPortal.Web", "DevOpsPortal.Web\DevOpsPortal.Web.csproj", "{491A22E3-3937-4D89-8E5E-401D05037B25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevOpsPortal.Web", "DevOpsPortal.Web\DevOpsPortal.Web.csproj", "{491A22E3-3937-4D89-8E5E-401D05037B25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevOpsPortal.Web.Dal", "DevOpsPortal.Web.Dal\DevOpsPortal.Web.Dal.csproj", "{37BF6393-08F6-497C-9DDD-090E92603701}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevOpsPortal.Web.Dal", "DevOpsPortal.Web.Dal\DevOpsPortal.Web.Dal.csproj", "{37BF6393-08F6-497C-9DDD-090E92603701}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Monitoring", "Monitoring", "{AB07DC14-BA12-41F8-9A86-C10D5E02AFE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monitoring.Core", "Monitoring.Core\Monitoring.Core.csproj", "{A81B1224-A07B-4C20-8C6F-42FEFC7467F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Monitoring.Core", "Monitoring.Core\Monitoring.Core.csproj", "{A81B1224-A07B-4C20-8C6F-42FEFC7467F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monitoring.Service", "Monitoring.Service\Monitoring.Service.csproj", "{3ED7153E-3488-46D4-A7AC-569D301532C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Monitoring.Service", "Monitoring.Service\Monitoring.Service.csproj", "{3ED7153E-3488-46D4-A7AC-569D301532C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monitoring.Opsview", "Monitoring.Opsview\Monitoring.Opsview.csproj", "{FB93540C-EC8A-46A2-8828-5EF17F34B0FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{3ED7153E-3488-46D4-A7AC-569D301532C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3ED7153E-3488-46D4-A7AC-569D301532C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3ED7153E-3488-46D4-A7AC-569D301532C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB93540C-EC8A-46A2-8828-5EF17F34B0FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB93540C-EC8A-46A2-8828-5EF17F34B0FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB93540C-EC8A-46A2-8828-5EF17F34B0FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB93540C-EC8A-46A2-8828-5EF17F34B0FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,6 +48,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{A81B1224-A07B-4C20-8C6F-42FEFC7467F5} = {AB07DC14-BA12-41F8-9A86-C10D5E02AFE0}
 		{3ED7153E-3488-46D4-A7AC-569D301532C4} = {AB07DC14-BA12-41F8-9A86-C10D5E02AFE0}
+		{FB93540C-EC8A-46A2-8828-5EF17F34B0FD} = {AB07DC14-BA12-41F8-9A86-C10D5E02AFE0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4522CA3D-7A80-4610-B51A-4B16B4584D35}

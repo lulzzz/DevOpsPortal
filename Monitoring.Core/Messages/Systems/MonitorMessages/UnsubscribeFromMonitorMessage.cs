@@ -7,13 +7,12 @@ namespace Monitoring.Core.Messages.MonitorMessages
 {
     public class UnsubscribeFromMonitorMessage : ISubscribeMonitorMessage
     {
-        public UnsubscribeFromMonitorMessage(string name, string system, IActorRef subscriberReference) : base(system)
+        public UnsubscribeFromMonitorMessage(string name, string system, IActorRef subscriberReference) : base(system, name)
         {
-            Name = name;
+            
             SubscriberReference = subscriberReference;
         }
 
-        public string Name { get; }
         public IActorRef SubscriberReference { get; }
     }
 }

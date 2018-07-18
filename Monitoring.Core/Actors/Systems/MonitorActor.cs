@@ -4,15 +4,12 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Monitoring.Core.Actors
+namespace Monitoring.Core.Actors.Systems
 {
-    public class SystemActor : ReceiveActor
+    public class MonitorActor : ReceiveActor
     {
-        private readonly Dictionary<string, IActorRef> _motinorActors;
-        public SystemActor()
+        public MonitorActor()
         {
-            _motinorActors = new Dictionary<string, IActorRef>();
-
             Receive<FtpFileMonitorMessage>(m => StartFtpFileMonitor(m));
             Receive<PowerShellMonitorMessage>(m => StartPowerShellMonitor(m));
             Receive<CmdMonitorMessage>(m => StartCmdMonitor(m));
@@ -30,6 +27,16 @@ namespace Monitoring.Core.Actors
         private void StartCmdMonitor(CmdMonitorMessage message)
         {
 
+        }
+
+        protected override void PreStart()
+        {
+            base.PreStart();
+        }
+
+        protected override void PostStop()
+        {
+            base.PostStop();
         }
     }
 }

@@ -4,7 +4,11 @@ using System.Text;
 
 namespace Monitoring.Core.Executors
 {
-    class CmdExecutor
+    class CmdExecutor : IExecutor
     {
+        public CmdExecutor() : base("cmd")
+        {
+
+        }
     }
 }

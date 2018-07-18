@@ -4,7 +4,7 @@ using System.Text;
 using Akka.Actor;
 using Monitoring.Core.Messages.MonitorMessages;
 
-namespace Monitoring.Core.Actors
+namespace Monitoring.Core.Actors.Systems
 {
     public class SystemsCoordinatorActor : ReceiveActor
     {

@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Monitoring.Core.Executors
 {
-    class FtpFileCheckExecutor : IExecutor
+    class SqlExecutor : IExecutor
     {
-        public FtpFileCheckExecutor() : base("ftp")
+        public SqlExecutor() : base("sql")
         {
 
         }
